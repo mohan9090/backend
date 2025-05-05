@@ -1,0 +1,177 @@
+:root {
+  --text-color: #ffffff;
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --button-bg: #1a1a1a;
+  --button-hover: #333;
+  --overlay-color: rgba(0, 0, 0, 0.4);
+  --sidebar-bg: rgba(0, 0, 0, 0.85);
+  --highlight-color: #ffffff;
+  --hover-color: rgba(248, 245, 245, 0.1);
+  font-family: "Nordhead", sans-serif;
+}
+
+.Aboutpage {
+  background-color: black;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.about-page {
+  color:black;
+  padding: clamp(40px, 8vh, 80px) clamp(15px, 4vw, 50px);
+  font-family: "Nordhead", sans-serif;
+  background: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.section-title {
+  margin-top: 2rem ;
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: bolder;
+    color: #c3ff00;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .section-description {
+    font-size: clamp(14px, 1.8vw, 20px);
+    font-weight: bold;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: justify;
+    color: #eaeaea;
+    transition: all 0.3s ease;
+  }
+  
+  .user-groups-section {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .group-title {
+    font-size: clamp(20px, 2.8vw, 32px);
+    margin-bottom: 2.5rem;
+    color: #c3ff00;
+    transition: all 0.3s ease;
+  }
+  
+  /* Larger cards with glow effect */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+  
+  .user-card {
+    background-color: #111;
+    border: 1px solid rgba(177, 221, 64, 0.15);
+    padding: 2rem;
+    width: 320px;
+    min-height: 260px;
+    border-radius: 20px;
+    box-shadow: 0 0 14px rgba(177, 221, 64, 0.08);
+    transition: all 0.4s ease;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  
+  .user-card:hover {
+    box-shadow: 0 0 24px rgba(177, 221, 64, 0.6);
+    transform: translateY(-6px);
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .user-card:hover .icon {
+    transform: scale(1.2);
+    animation: bounce 0.5s ease;
+  }
+  
+  .user-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+  }
+  
+  .user-description {
+    font-size: 16px;
+    text-align: justify;
+    color: #cccccc;
+    line-height: 1.6;
+    padding: 0 4px;
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1.2); }
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 clamp(10px, 3vw, 30px);
+    }
+  
+    .user-card {
+      width: clamp(280px, 90%, 400px);
+      min-height: 220px;
+    }
+  
+    .section-title {
+      font-size: clamp(16px, 4vw, 20px);
+    }
+  
+    .section-description {
+      font-size: clamp(12px, 3vw, 16px);
+      padding: 0 clamp(10px, 3vw, 30px);
+    }
+  
+    .group-title {
+      font-size: clamp(18px, 4vw, 24px);
+    }
+  
+    .user-title {
+      font-size: clamp(14px, 3.5vw, 16px);
+    }
+  
+    .user-description {
+      font-size: clamp(12px, 3vw, 14px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .about-page {
+      padding: clamp(30px, 6vh, 60px) clamp(10px, 3vw, 40px);
+    }
+  
+    .user-card {
+      width: clamp(240px, 95%, 320px);
+      padding: 1.5rem;
+    }
+  }
+  

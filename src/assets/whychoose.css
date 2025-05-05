@@ -1,0 +1,112 @@
+.Whypage {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  --text-color: #ffffff;
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --button-bg: #1a1a1a;
+  --button-hover: #333;
+  --overlay-color: rgba(0, 0, 0, 0.4);
+  --sidebar-bg: rgba(0, 0, 0, 0.85);
+  --highlight-color: #ffffff;
+  --hover-color: rgba(248, 245, 245, 0.1);
+  font-family: "Nordhead", sans-serif;
+}
+
+
+body, html, #app {
+  width: 100%;
+  height: 100%;
+}
+
+.why-choose {
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
+    font-family: 'Nordhead', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+  }
+  
+  .why-title {
+    margin-top: clamp(70px, 12vh, 100px);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    color: #c3ff00;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+  
+  .why-intro {
+    font-size: clamp(18px, 2.5vw, 25px);
+    max-width: min(90%, 700px);
+    font-weight: bolder;
+    color: white;
+    margin: 0 auto clamp(2rem, 4vw, 3rem);
+    line-height: 1.6;
+    margin-top: clamp(30px, 6vh, 50px);
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+    justify-content: center;
+    align-items: stretch;
+    margin-top: clamp(45px, 7.5vh, 79px);
+    transition: all 0.3s ease;
+    padding: clamp(1rem, 2vw, 2rem);
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-auto-rows: 1fr;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(195, 255, 0, 0.2);
+    border-radius: 12px;
+    padding: clamp(1.125rem, 2.25vw, 1.5rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    backdrop-filter: blur(10px);
+    will-change: transform;
+    opacity: 1;
+}
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(195, 255, 0, 0.3);
+    border-color: rgba(195, 255, 0, 0.5);
+  }
+  
+  .feature-title {
+    font-size: clamp(15px, 1.875vw, 21px);
+    font-weight: 600;
+    color: #c3ff00;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1.2rem);
+    text-align: left;
+  }
+  
+  .feature-description {
+    font-size: clamp(12px, 1.35vw, 15px);
+    color: #ccc;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
+  }
+  

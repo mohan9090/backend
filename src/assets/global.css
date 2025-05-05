@@ -1,0 +1,67 @@
+/* Import responsive design system */
+@import './responsive.css';
+
+:root {
+  /* Colors */
+  --text-color: #1a1a1a;
+  --background-color: #ffffff;
+  --primary-color: #c3ff00;
+  --secondary-color: #333333;
+  --accent-color: #0066cc;
+  
+  /* Typography */
+  font-family: Nordhead, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* Base styles */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+  
+  

@@ -1,0 +1,139 @@
+:root {
+    --background-color: #c3ff00;
+    --text-color: #333;
+    --input-bg: white;
+    --button-bg: #333;
+    --button-hover: #555;
+    font-family: "Nordhead", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+  }
+
+.forgot-password-page{
+    background-color: #c3ff00 !important;  /* Force background color */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .forgot-password-container {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    width: 90vw;
+    max-width: 580px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    word-break: break-word;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    word-break: break-word;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+    min-width: 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--button-bg);
+    color: #c3ff00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
+  
+@media (max-width: 900px) {
+  .forgot-password-container {
+    width: 95vw;
+    max-width: 420px;
+    padding: 2rem 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .forgot-password-container {
+    width: 98vw;
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+    border-radius: 8px;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+  input {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
+  

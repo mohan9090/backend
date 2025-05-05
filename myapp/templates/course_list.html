@@ -1,0 +1,15 @@
+<!-- templates/course_list.html -->
+
+<h2>Available Courses</h2>
+<ul>
+    {% for course in courses %}
+        <li>
+            {{ course.title }} -
+            <a href="{% url 'enroll_course' course.id %}">Enroll</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% if user.is_authenticated and user.role == 'admin' %}
+    <a href="{% url 'create_course' %}">Create a New Course</a>
+{% endif %}

@@ -1,0 +1,263 @@
+.login-page {
+  background-color: #c3ff00;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+  overflow-x: hidden;   /* Prevent horizontal scroll */
+  overflow-y: auto;     /* Allow scroll if content overflows */
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1300px;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  flex: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.main-logo {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  min-width: 600px;
+}
+
+.right-section {
+  flex: 1.8;
+  padding: 4rem;
+  min-width: 300px;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  min-width: 300px; 
+  box-sizing: border-box;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2.7rem;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-align: left;
+  direction: ltr;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1a1a1a;
+  color: #c3ff00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.google-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  color: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.google-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.google-icon {
+  width: 48px;
+  height: 48px;
+  background: none;
+}
+
+.signup-linkl {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.signup-linkl a {
+  color: #111edc;
+  text-decoration: none;
+}
+
+.forgot-password {
+  text-align: left;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-decoration-color: #111edc;
+  display: block;
+}
+
+.forgot-password a {
+  color: #111edc;
+  text-decoration: none;
+}
+
+.left-section, .right-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .main-content {
+    width: 95%;
+  }
+  
+  .login-container {
+    padding: 2.5rem;
+  }
+  
+  .right-section {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+    width: 100%;
+    min-height: auto;
+    justify-content: center;
+  }
+  
+  .right-section {
+    padding: 2rem 1rem;
+  }
+  
+  .login-container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+  
+  .login-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 1.5rem;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .login-container {
+    min-width: 280px;
+    padding: 1.5rem;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .google-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 1rem;
+  }
+  
+  .login-container {
+    padding: 1.2rem;
+  }
+  
+  .login-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  input, .login-button, .google-button {
+    padding: 0.7rem;
+  }
+  
+  .google-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .signup-link {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Handle zoom responsiveness */
+@media screen and (min-resolution: 192dpi) {
+  .login-container {
+    padding: 2rem;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+  }
+  
+  input, .login-button, .google-button {
+    font-size: 0.9rem;
+  }
+}

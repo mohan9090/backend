@@ -1,0 +1,128 @@
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background-color: #000;
+    min-height: 30vh;
+    width: 100%;
+}
+
+.glow-box h2{
+    font-weight: bolder;
+}
+
+/* Contact Form Adjustments */
+.glow-box {
+    max-width: 150px; /* Reduced from larger size */
+    padding: 1.5rem; /* Reduced padding */
+}
+
+.contact-form {
+    gap: 0.8rem; /* Reduced spacing between fields */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.6rem 1rem; /* Smaller padding */
+    font-size: 1rem; /* Slightly smaller text */
+    max-width: 100%;
+}
+
+.glow-button {
+    padding: 0.75rem 1.5rem; /* Smaller button */
+    font-size: 1rem; /* Smaller text */
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .glow-box {
+        width: 90%;
+        padding: 1rem;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem 1rem;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bolder;
+    outline: none;
+    background-color: #f4f4f4;
+    color: #000;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #555;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    box-shadow: 0 0 0 2px #c3ff00;
+  }
+
+  @keyframes flickerOn {
+    0%   { opacity: 0; transform: scale(0.98); box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    30%  { opacity: 1; transform: scale(1.02); box-shadow: 0 0 40px 20px rgba(195, 255, 0, 0.4); }
+    50%  { opacity: 0.8; transform: scale(1); box-shadow: 0 0 10px 4px rgba(195, 255, 0, 0.1); }
+    70%  { opacity: 1; transform: scale(1.01); box-shadow: 0 0 15px 7.5px rgba(195, 255, 0, 0.5); }
+    100% { opacity: 1; transform: scale(1); box-shadow: 0 0 20px 10px rgba(195, 255, 0, 0.6); }
+  }
+  
+  .glow-box {
+    width: 100%; /* Changed from 50% */
+    max-width: 700px; /* Increased max width for wider form */
+    opacity: 0;
+    max-width: 800px; /* Make it larger for more glow surface */
+    padding: 3rem 1.5rem; /* Reduced padding for compact layout */
+    margin: 4rem auto;
+    background-color: #c3ff00;
+    transform: translateY(60px) scale(0.98);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 1s ease;
+    will-change: opacity, transform, box-shadow;
+  }
+  
+  .glow-on-scroll {
+    animation: flickerOn 1.8s ease-out forwards;
+  }
+  
+  .glow-button {
+    background: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .glow-button:hover {
+    transform: scale(1.05);
+  }
+
+  @keyframes flickerOff {
+    0%   { opacity: 1; box-shadow: 0 0 80px 40px rgba(195, 255, 0, 0.6); }
+    40%  { opacity: 0.6; box-shadow: 0 0 30px 10px rgba(195, 255, 0, 0.3); }
+    80%  { opacity: 0.2; box-shadow: 0 0 10px 2px rgba(195, 255, 0, 0.1); }
+    100% { opacity: 0; transform: translateY(60px) scale(0.98); box-shadow: none; }
+  }
+  
+  .glow-off {
+    animation: flickerOff 1s ease-out forwards;
+  }
+
+  
