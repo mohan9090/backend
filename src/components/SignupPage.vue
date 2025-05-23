@@ -56,6 +56,14 @@
         </div>
         <button type="submit" class="signup-button">Sign Up</button>
       </form>
+
+      <div class="google-login">
+        <button @click="handleGoogleLogin" :disabled="isGoogleLoading">
+          Sign in with Google
+        </button>
+        <p v-if="googleMessage">{{ googleMessage }}</p>
+      </div>
+
       <p id="message" v-if="message">{{ message }}</p>
     </div>
   </div>
@@ -186,78 +194,5 @@ const validatePassword = (password) => {
   return regex.test(password);
 };
 </script>
-
-<style src="../assets/signup.css"></style>
-
-<template>
-  <div class="signup-page">
-    <div class="signup-container">
-      <h2>Sign Up</h2>
-      <form @submit.prevent="handleSignup">
-        <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" v-model="username" placeholder="Enter your username" required />
-        </div>
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" v-model="email" placeholder="Enter your email" required />
-        </div>
-        <div class="input-group">
-          <label for="role">Role</label>
-          <select 
-            v-model="role" 
-            required 
-            @focus="showRoleHint = true" 
-            @blur="showRoleHint = false"
-          >
-            <option value="" disabled>Select your role</option>
-            <option value="admin">Admin</option>
-            <option value="instructor">Instructor</option>
-            <option value="student">Student</option>
-          </select>
-          <div class="role-hint" v-if="showRoleHint">
-            Please select your role: Admin, Instructor, or Student.
-          </div>
-        </div>
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input 
-            type="password" 
-            v-model="password" 
-            placeholder="Enter your password" 
-            @focus="showHint = true" 
-            @blur="showHint = false"
-            required 
-          />
-          <div class="password-hint" v-if="showHint">
-            Password must be at least 8 characters long, and include at least one uppercase letter, 
-            one lowercase letter, one number, and one special character.
-          </div>
-          <span v-if="passwordError" class="error">{{ passwordError }}</span>
-        </div>
-        <div class="input-group">
-          <label for="password2">Confirm Password</label>
-          <input 
-            type="password" 
-            v-model="password2" 
-            placeholder="Confirm your password" 
-            required 
-          />
-          <span v-if="password2Error" class="error">{{ password2Error }}</span>
-        </div>
-        <button type="submit" class="signup-button">Sign Up</button>
-      </form>
-
-      <div class="google-login">
-        <button @click="handleGoogleLogin" :disabled="isGoogleLoading">
-          Sign in with Google
-        </button>
-        <p v-if="googleMessage">{{ googleMessage }}</p>
-      </div>
-
-      <p id="message" v-if="message">{{ message }}</p>
-    </div>
-  </div>
-</template>
 
 <style src="../assets/signup.css"></style>

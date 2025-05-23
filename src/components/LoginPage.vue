@@ -1,6 +1,7 @@
 // filepath: d:\LMS PROJECT\LMS(Project) (1)\LMS(Project)\project\src\components\LoginPage.vue
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+
 import { useRouter } from "vue-router";
 import axios from "axios";
 import "../assets/login.css"; // Ensure this path is correct
@@ -17,7 +18,7 @@ const handleLogin = async () => {
   console.log("Attempting login with:", email.value, password.value);
   try {
     const response = await axios.post("http://127.0.0.1:8000/api/login/", {
-      username: email.value,
+      email: email.value,
       password: password.value,
     });
     console.log("Login response:", response.data);

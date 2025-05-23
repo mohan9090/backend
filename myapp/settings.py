@@ -171,16 +171,24 @@ SIMPLE_JWT = {
     'TOKEN_OBTAIN_SERIALIZER': 'authentication.serializers.MyTokenObtainPairSerializer',  # <-- important
 }
 
-CORS_ALLOW_ALL_ORIGINS = True  # (for now, for development)
-CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be included in CORS requests
+# CORS settings
+
+# For development, allow all origins
+CORS_ALLOW_ALL_ORIGINS = True
+
+# Allow cookies to be included in CORS requests
+CORS_ALLOW_CREDENTIALS = True
+
 from corsheaders.defaults import default_headers
 
-CORS_ALLOW_HEADERS = list(default_headers) + [
-    'access-control-allow-origin',
-    'access-control-allow-credentials',
-    'access-control-allow-methods',
-    'access-control-allow-headers',
-]
+# Use default headers only, no need to add access-control-allow-* headers manually
+CORS_ALLOW_HEADERS = list(default_headers)
+
+# For production, it is recommended to specify allowed origins explicitly:
+# CORS_ALLOWED_ORIGINS = [
+#     "https://example.com",
+#     "https://sub.example.com",
+# ]
 
 # Basic logging configuration to show info level logs in console
 LOGGING = {
